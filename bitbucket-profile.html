@@ -10,13 +10,18 @@
 @status alpha
 @url github.io
 -->
-<polymer-element name="bitbucket-profile" attributes="notitle">
+<polymer-element name="bitbucket-profile" attributes="user">
 
   <template>
 
     <link href="bitbucket-profile.css" rel="stylesheet" />
 
-    <content></content>
+    <div><a href="{{profileLink}}">{{user}}</a></div>
+    <div>{{name}}</div>
+    <div>{{since}}</div>
+    <div>{{location}}</div>
+    <div>{{website}}</div>
+    <div><img src="{{avatarLink}}"></div>
 
   </template>
 
@@ -28,8 +33,22 @@
        * @type string
        */
       user: '',
-
       ready: function() {
+        var self = this;
+
+        window.bitbucketprofilecallback = function(userData) {
+          console.log(userData);
+          self.name = userData.display_name;
+          self.since = userData.created_on;
+          self.location = userData.location;
+          self.website = userData.website;
+          self.avatarLink = userData.links.avatar.href;
+          self.profileLink = userData.links.html.href;
+        };
+
+        var script = document.createElement('script');
+        script.setAttribute('src', 'https://bitbucket.org/api/2.0/users/' + this.user + '?callback=bitbucketprofilecallback');
+        this.appendChild(script);
       }
 
     });
