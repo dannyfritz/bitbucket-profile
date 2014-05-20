@@ -1,0 +1,39 @@
+<link rel="import" href="../polymer/polymer.html">
+
+<!--
+##### Example
+
+    <bitbucket-profile user="dannyfritz"></bitbucket-profile>
+
+@element bitbucket-profile
+@blurb Element providing a profile for bitbucket users.
+@status alpha
+@url github.io
+-->
+<polymer-element name="bitbucket-profile" attributes="notitle">
+
+  <template>
+
+    <link href="bitbucket-profile.css" rel="stylesheet" />
+
+    <content></content>
+
+  </template>
+
+  <script>
+
+    Polymer({
+      /**
+       * @attribute user
+       * @type string
+       */
+      user: '',
+
+      ready: function() {
+      }
+
+    });
+
+  </script>
+
+</polymer-element>

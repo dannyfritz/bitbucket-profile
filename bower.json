@@ -1,0 +1,19 @@
+{
+  "name": "bitbucket-profile",
+  "dependencies": {
+    "polymer": "Polymer/polymer#master"
+  },
+  "version": "0.0.0",
+  "authors": [
+    "Danny TechnoCat Fritz <dannyfritz@gmail.com>"
+  ],
+  "main": "bitbucket-profile.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
