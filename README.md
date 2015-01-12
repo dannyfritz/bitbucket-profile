@@ -1,6 +1,8 @@
 bitbucket-profile
 =================
 
+[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/dannyfritz/bitbucket-profile?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 See the [component page](http://polymerlabs.github.io/untitled-element) for more information.
 
 ## Getting Started
